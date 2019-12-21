@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url(img/bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.head{
+    margin: 0 auto;
+    width: 400px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+.head > h1{
+    color: #ddd;
+    font-size: 40px;
+    text-align: center;
+}
+
+.head > input[type="text"]{
+    width: 100%;
+    margin-top: 30px;
+    border: none;
+    border-bottom: 1px solid #82ccdd;
+    background: transparent;
+    height: 40px;
+    color: #ddd;
+    font-size: 16px;
+    outline: none;
+}
+
+.head > input[type="submit"]{
+    height: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #82ccdd;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.head > input[type="submit"]:hover{
+    background-color: #fff;
+    color: #82ccdd;
+}
+
+.container{
+    /* width: 35%;
+    margin: 0 auto; */
+    overflow: hidden;
+}
+
+.container > .completed , .container > .notCompleted{
+    position: relative;
+    width: 25%;
+    color: rgb(5,13,10);
+    background-color:rgba(255,255,255,0.7);
+    padding: 1% 1.5%;
+    border-radius: 20px;
+}
+
+.container > .completed{
+    float: left;
+    margin-left: 17.5%;
+}
+
+.container > .notCompleted{
+    float: right;
+    margin-right: 17.5%;
+}
+
+.container h2{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.container li{
+    margin-bottom: 15px;
+    overflow: hidden;
+    line-height: 1.6em;
+}
+
+.container li a{
+    display: block;
+    float: right;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    margin: 0 0 0 2%;
+}
+
+.inputStyle{
+    font-size: 16px;
+    width: 80%;
+    overflow-x:auto;
+    outline: none;
+     border: none; 
+     border-bottom: 2px solid black; 
+    background: transparent;
+}
+
+#allChoose1 , #allChoose2 , #clearAll1 , #clearAll2{
+    float: right;
+    width: 20%;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    background-color: rgb(231,218,201);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#allChoose1:hover , #allChoose2:hover , #clearAll1:hover , #clearAll2:hover{
+    color:  rgb(231,218,201);
+    background-color: black;
+}
