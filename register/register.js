@@ -61,6 +61,18 @@ window.onload=function(){
             falseContent.parentNode.className="clearFix false";
         }
         else if(reg3.test(pw.value)) {falseContent.parentNode.className="clearFix false hidden";cnt++};
+        //判断密码中是否含有#&*?四个中的一个
+        let reg4=/[#&*?]/;
+        if (!reg4.test(pw.value))
+        {
+            falseContent.innerHTML="密码中应存在#&*?中的一种";
+            falseContent.parentNode.className="clearFix false"
+        }
+        else if(!reg2.test(pw.value)&&reg3.test(pw.value))
+        {
+            falseContent.parentNode.className="clearFix false hidden";
+            cnt++;
+        }
         //判断密码长度是否为（9-15）位
         let reg1=/^[A-z2345678#&*?]{9,15}$/
         if (!reg1.test(pw.value))
@@ -68,12 +80,12 @@ window.onload=function(){
             falseContent.innerHTML="密码应为9-15位(且仅有A-z,2-8,#&*?)";
             falseContent.parentNode.className="clearFix false";
         }
-        else if(!reg2.test(pw.value)&&reg3.test(pw.value))
+        else if(reg4.test(pw.value)&&!reg2.test(pw.value)&&reg3.test(pw.value))
         {
             falseContent.parentNode.className="clearFix false hidden";
             cnt++;
         }
-        if (cnt==3) flgPw=true;
+        if (cnt==4) flgPw=true;
         else flgPw=false;
         //更新密码后对确认密码再进行判定
         if (cmpw.value!="")
